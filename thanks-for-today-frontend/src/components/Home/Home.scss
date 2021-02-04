@@ -2,10 +2,12 @@
 
 //pc, 기본
 .home {
+    width: 100vw;
+    height: calc(100vh + 1000px);
     @include flex(column, center, center);
     .home-main {
         width: 100vw;
-        height: calc(100vh + 85px);
+        height: calc(100vh + 130px);
         background-image: url("../../images/background.png");
         margin-top: -2%;
         background-size: cover;
@@ -15,7 +17,7 @@
             .home-text {
                 color: #fff;
                 .title {
-                    font-size: 45px;
+                    font-size: 42px;
                     font-weight: bold;
                 }
                 .description {
@@ -42,11 +44,20 @@
                 }
             }
             .home-calendar {
+                .react-calendar {
+                    width: 600px;
+                    max-width: 100%;
+                    border: 1px solid #a0a096;
+                    border-radius: 30px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    line-height: 40px;
+                }
             }
         }
     }
-    .home-side {
-        height: 400px;
+    .sidehome {
+        padding-top: 150px;
+        height: 800px;
     }
 }
 

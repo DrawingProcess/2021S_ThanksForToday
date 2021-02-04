@@ -6,9 +6,9 @@ import Home from 'components/Home';
 
 class HomeContainer extends Component {
     render() {
-        console.log('home container');
+        const { match, history } = this.props;
         return (
-            <Home />
+            <Home match={match} history={history} />
         );
     }
 }
