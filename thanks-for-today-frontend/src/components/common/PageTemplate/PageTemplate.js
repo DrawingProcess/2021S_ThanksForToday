@@ -9,7 +9,7 @@ const PageTemplate = ({ header, children, footer }) => {
         <div className="page-template">
             <header>{header}</header>
             <main>{children}</main>
-            <footer>{footer}</footer>
+            <footer><Footer /></footer>
         </div>
     );
 };

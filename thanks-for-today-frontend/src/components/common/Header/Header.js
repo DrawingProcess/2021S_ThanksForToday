@@ -1,33 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "images/logo.png";
+import logoDark from "images/logo_dark.png";
 import './Header.scss';
 
-const Header = () => {
+const Header = ({ ismain }) => {
     return (
         <div className="header">
             <div className="header-content">
                 <div className="logo">
-                    <img src={logo}></img>
+                    <img src={ismain ? logo : logoDark}></img>
                 </div>
-                <div className="list">
-                    <Link to="/home">
+                <div className={ismain ? "list" : "list dark"}>
+                    <Link to="/">
                         MAIN
-					</Link>
-                    <Link to="/write">
-                        일기쓰러가기
-					</Link>
-                    <Link to="/secret">
-                        소곤소곤 나만의 비밀이야기
 					</Link>
                     <Link to="/todo">
                         TODO
 					</Link>
-                    <Link to="/calendar" >
-                        캘린더
+                    <Link to="/calendar">
+                        거대 캘린더
 					</Link>
-                    <Link to="/post">
-                        운세
+                    <Link to="/information">
+                        AI 스마트 다이어리란?
 					</Link>
                 </div>
             </div>
