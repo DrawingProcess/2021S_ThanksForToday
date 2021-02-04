@@ -7,13 +7,12 @@ from summa import keywords
 # 핵심 문장 추출
 def get_key_sentence(sentence):
     key_sentence = summarize(sentence, ratio=0.1)   # ratio는 전체 문장 수에 비례하여 추출할 핵심 문장의 비율
-    key_sentence = list(key_sentence.split('.'))[0] # 처음 한 문장만 추출
     return key_sentence
 
 
 # 핵심 단어 추출
-def get_key_word(key_sentence):
-    key_word = keywords.keywords(key_sentence, words=10)    # 핵심 단어 10개 추출
+def get_key_word(sentence):
+    key_word = keywords.keywords(sentence, words=15)    # 핵심 단어 15개 추출
     return key_word
 
 
@@ -41,14 +40,15 @@ if __name__ == '__main__':
         이 외에도 고 위원은 “데이터 라벨링 말고도 노약자를 위해 도우미 로봇을 제작하는 일이나, 취약 계층에 디지털 교육을 제공하는 일, 또는 섬이나 오지에 사는 주민들을 위해 원격의료를 서비스하는 일 등이 모두 디지털 뉴딜을 통해 창출할 수 있는 일자리”라고 밝혔다.'
         '''
 
-    key_sentence = get_key_sentence(sentence)   # 핵심 문장
-    key_word = get_key_word(key_sentence)       # 핵심 단어들
+    key_sentence = get_key_sentence(sentence)   # 핵심 문장들(str)
+    key_word = get_key_word(sentence)       # 핵심 단어들(str)
 
-    key_word_sentence = list(key_sentence.split()) # str -> list로 type 변환
+
+    key_word_sentence = list(key_sentence.split()) # 문장 리스트를 단어로 끊음
     key_word = list(key_word.split())              # str -> list로 type 변환
 
-    #print("key sentence : ", key_word_sentence)
-    #print("keyword : ", key_word)
+    #print("key word sentence : ", key_word_sentence)
+    #print("key word : ", key_word)
 
 
     word_cnt = {}
@@ -61,6 +61,9 @@ if __name__ == '__main__':
     #print(word_cnt)
 
     # 빈도 수가 높은 순서로 정렬
-    sorted_word_cnt = sorted(word_cnt.items(), reverse=True, key=lambda item: item[1])
-
+    sorted_word_cnt = sorted(word_cnt.items(), reverse=True, key=lambda item: item[1]) # 리스트
     print(sorted_word_cnt)
+
+    final_key_word = []
+    final_key_word.append([sorted_word_cnt[i][0] for i in range(5)])
+    print(final_key_word)
