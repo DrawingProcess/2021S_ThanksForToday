@@ -1,20 +1,25 @@
-@import 'styles/base.scss';
+@import "styles/base.scss";
 
 //pc, 기본
-.footer{ 
+.footer {
+    background-image: url("../../../images/footerimage.png");
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vh - 100px);
 }
 
-
 //태블릿
-@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) { 
-    .footer{  
+@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) {
+    .footer {
+        width: 100vw;
+        height: calc(100vh - 100px);
     }
 }
 
-
-
 //모바일
-@media screen and (max-width:$mobile-max){
-    .footer{  
+@media screen and (max-width: $mobile-max) {
+    .footer {
+        width: 100vw;
+        height: calc(100vh - 100px);
     }
 }

@@ -1,20 +1,24 @@
-@import 'styles/base.scss';
+@import "styles/base.scss";
 
 //pc, 기본
-.page-template{ 
-}
-
-
-//태블릿
-@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) { 
-    .page-template{  
+.page-template {
+    @include flex(column, center, center);
+    main {
+        text-align: center;
+    }
+    footer {
+        @include flex(column, center, center);
     }
 }
 
-
+//태블릿
+@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) {
+    .page-template {
+    }
+}
 
 //모바일
-@media screen and (max-width:$mobile-max){
-    .page-template{  
+@media screen and (max-width: $mobile-max) {
+    .page-template {
     }
 }
