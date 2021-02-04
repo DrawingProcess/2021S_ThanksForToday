@@ -1,0 +1,62 @@
+@import "styles/base.scss";
+
+//pc, 기본
+.header {
+	.header-content {
+		@include flex(row, center, center);
+		padding-top: 40px;
+		padding-left: 56px;
+		padding-right: 30px;
+		width: 100vw;
+		height: 70px;
+		box-sizing: border-box;
+		color: #ffffff;
+		position: fixed;
+		top: 0;
+		left: 0;
+		.logo {
+			width: 10%;
+			color: black;
+			margin-left: 100px;
+		}
+		.list {
+			@include flex(row, space-between, center);
+			width: 40%;
+			margin-right: 300px;
+			a {
+				color: #ffffff;
+				text-decoration: none;
+				&:hover {
+					font-weight: bold;
+					border-bottom: 1px solid #ffffff;
+				}
+			}
+		}
+		.button {
+			@include flex(row, space-around, center);
+			.mypage {
+			}
+			.login {
+				color: #ffffff;
+				margin-left: 5px;
+				background: #d45382;
+				width: 80px;
+				height: 33px;
+				border-radius: 3px;
+				border: none;
+			}
+		}
+	}
+}
+
+//태블릿
+@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) {
+	.header {
+	}
+}
+
+//모바일
+@media screen and (max-width: $mobile-max) {
+	.header {
+	}
+}

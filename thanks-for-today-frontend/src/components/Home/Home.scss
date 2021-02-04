@@ -1,0 +1,67 @@
+@import "styles/base.scss";
+
+//pc, 기본
+.home {
+    @include flex(column, center, center);
+    .home-main {
+        width: 100vw;
+        height: calc(100vh + 85px);
+        background-image: url("../../images/background.png");
+        margin-top: -2%;
+        background-size: cover;
+        .home-content {
+            @include flex(column, center, center);
+            margin-top: 200px;
+            .home-text {
+                color: #fff;
+                .title {
+                    font-size: 45px;
+                    font-weight: bold;
+                }
+                .description {
+                    margin-top: 10px;
+                    font-size: 15px;
+                    margin-bottom: 25px;
+                }
+            }
+            .home-search {
+                @include flex(row, center, center);
+                margin-top: 45px;
+                margin-bottom: 35px;
+                button {
+                    margin-left: 7px;
+                    background: #d45382;
+                    width: 80px;
+                    height: 43px;
+                    border-radius: 3px;
+                    border: none;
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+            .home-calendar {
+            }
+        }
+    }
+    .home-side {
+        height: 400px;
+    }
+}
+
+//태블릿
+@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) {
+    .home {
+        width: 100vw;
+        height: calc(100vh + 350px);
+    }
+}
+
+//모바일
+@media screen and (max-width: $mobile-max) {
+    .home {
+        width: 100vw;
+        height: calc(100vh + 350px);
+    }
+}
