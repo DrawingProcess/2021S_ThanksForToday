@@ -1,0 +1,20 @@
+@import 'styles/base.scss';
+
+//pc, 기본
+.footer{ 
+}
+
+
+//태블릿
+@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) { 
+    .footer{  
+    }
+}
+
+
+
+//모바일
+@media screen and (max-width:$mobile-max){
+    .footer{  
+    }
+}

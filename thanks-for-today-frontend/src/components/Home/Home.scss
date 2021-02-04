@@ -1,0 +1,21 @@
+@import 'styles/base.scss';
+
+
+//pc, 기본
+.home{
+}
+
+
+//태블릿
+@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) { 
+    .home{ 
+    }
+}
+
+
+
+//모바일
+@media screen and (max-width:$mobile-max){
+    .home{ 
+    }
+}
