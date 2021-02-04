@@ -8,6 +8,7 @@
         height: 38px;
         box-sizing: border-box;
         border: none;
+        border-radius: 3px;
     }
     .searchbar {
         @include flex(row, space-between, center);
