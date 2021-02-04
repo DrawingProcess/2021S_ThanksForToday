@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://www.voanews.com/middle-east/voa-news-iran/full-text-trumps-speech-iran'
+url = 'https://www.etnews.com/20210204000183?mc=em_001_00001'
 html = requests.get(url)
 soup = BeautifulSoup(html.text)
 content = soup.select_one('.article__body  p:nth-child(2)').get_text()
