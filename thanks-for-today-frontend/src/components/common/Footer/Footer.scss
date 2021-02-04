@@ -2,10 +2,16 @@
 
 //pc, 기본
 .footer {
-    background-image: url("../../../images/footerimage.png");
+    @include flex(column, center, center);
+    background: #e1a7b8;
     background-size: cover;
     width: 100vw;
-    height: calc(100vh - 100px);
+    height: 400px;
+    .footer-content {
+        @include flex(row, space-between, center);
+        width: 50%;
+        padding-bottom: 20px;
+    }
 }
 
 //태블릿
