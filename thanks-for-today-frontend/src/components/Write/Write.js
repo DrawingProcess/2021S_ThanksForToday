@@ -3,6 +3,9 @@ import './Write.scss';
 import { Link } from 'react-router-dom';
 import Editor from "components/Editor";
 import moment from "moment";
+import img1 from "images/1.png";
+import img2 from "images/2.png";
+import img3 from "images/3.png";
 
 class Write extends Component {
     constructor(props) {
@@ -44,7 +47,9 @@ class Write extends Component {
                     </button>
                 </div>
                 <div className="icon">
-                    gg
+                    <img src={img1}></img>
+                    <img src={img2}></img>
+                    <img src={img3}></img>
                 </div>
                 <div className="title">
                     <input

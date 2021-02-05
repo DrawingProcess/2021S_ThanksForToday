@@ -23,13 +23,15 @@
         }
     }
     .icon {
-        width: 60%;
-        height: 40px;
+        @include flex(row, space-around, center);
+        width: 59.8%;
+        height: 50px;
         background: #fff;
         border-radius: 5px 5px 0 0;
+        border-bottom: 2px solid #eee;
     }
     .title {
-        width: 60%;
+        width: 59.8%;
         height: 40px;
         background: #fff;
         input {
