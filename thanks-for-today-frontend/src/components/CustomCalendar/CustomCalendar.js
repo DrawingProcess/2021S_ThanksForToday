@@ -38,8 +38,10 @@ class CustomCalendar extends Component {
             value: new Date(),
             onChange: new Date(),
             popup: false,
+            selectedDay: new Date(),
         };
     }
+
     onDateChange = date => {
         const { popup } = this.state;
         this.setState({
@@ -62,9 +64,12 @@ class CustomCalendar extends Component {
                         events={this.state.events}
                         startAccessor="start"
                         endAccessor="end"
-                        defaultDate={moment().toDate()}
                         localizer={localizer}
                         onDoubleClickEvent={this.onDateChange}
+                        defaultDate={new Date()}
+                        onNavigate={date => {
+                            this.setState({ selectedDate: date });
+                        }}
                     />
                     {popup && <CustomPopup />}
                 </div>

@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+hanspell/__init__.py
+hanspell/constants.py
+hanspell/response.py
+hanspell/spell_checker.py
+py_hanspell.egg-info/PKG-INFO
+py_hanspell.egg-info/SOURCES.txt
+py_hanspell.egg-info/dependency_links.txt
+py_hanspell.egg-info/requires.txt
+py_hanspell.egg-info/top_level.txt
