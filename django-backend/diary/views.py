@@ -121,3 +121,24 @@ def delete(request, pk):
             }, json_dumps_params = {'ensure_ascii': True})
 
 
+
+def words(request):
+    try:
+        qs = Today.objects.all()
+        res = ""
+
+        for i in qs:
+            res += i.title
+            res += ' '
+            res += i.body
+            res += ' '
+        
+        return JsonResponse({
+                'words' : res
+            }, json_dumps_params = {'ensure_ascii': True}, safe=False)
+
+    except Exception as e:
+        return JsonResponse({
+                'message' : 'error',
+                'error' : str(e),
+            }, json_dumps_params = {'ensure_ascii': True})
