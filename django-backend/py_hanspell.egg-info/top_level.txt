@@ -1,0 +1,3 @@
+diary
+hanspell
+thanks_for_today
