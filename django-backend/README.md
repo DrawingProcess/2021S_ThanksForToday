@@ -30,7 +30,7 @@ POST /create
 }
 ```
 
-## 글 생성
+## 글 조회
 
 GET /read
 
