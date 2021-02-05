@@ -67,6 +67,9 @@ class Home extends Component {
                 <div className="sidehome">
                     <CustomSlider />
                 </div>
+                <div className="analysis">
+
+                </div>
             </div>
         )
     }

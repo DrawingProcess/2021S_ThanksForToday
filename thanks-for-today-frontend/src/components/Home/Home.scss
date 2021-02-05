@@ -7,7 +7,7 @@
     @include flex(column, center, center);
     .home-main {
         width: 100vw;
-        height: calc(100vh + 130px);
+        height: calc(100vh + 140px);
         background-image: url("../../images/background.png");
         margin-top: -2%;
         background-size: cover;
@@ -58,6 +58,8 @@
     .sidehome {
         padding-top: 150px;
         height: 800px;
+    }
+    .analysis {
     }
 }
 

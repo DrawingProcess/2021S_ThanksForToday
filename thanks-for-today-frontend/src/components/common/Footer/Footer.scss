@@ -2,15 +2,32 @@
 
 //pc, 기본
 .footer {
-    @include flex(column, center, center);
+    position: relative;
+    .footer-img1 {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+    }
+    .footer-img2 {
+        position: absolute;
+        bottom: 0px;
+        left: 1150px;
+    }
     background: #e1a7b8;
     background-size: cover;
     width: 100vw;
     height: 400px;
     .footer-content {
-        @include flex(row, space-between, center);
+        position: absolute;
+        bottom: 250px;
+        left: 750px;
         width: 50%;
         padding-bottom: 20px;
+        .footer-text {
+            .text {
+                margin: 0 10px;
+            }
+        }
     }
 }
 
