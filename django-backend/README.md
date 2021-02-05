@@ -89,7 +89,7 @@ POST /update/ (int: pk)
 
 ## 글 삭제
 
-POST /delete/ (int: pk)
+GET /delete/ (int: pk)
 
 특정 글을 삭제합니다.
 
