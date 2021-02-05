@@ -42,6 +42,11 @@ class Home extends Component {
                                 <img src={searchIcon} alt="search" />
                             </button>
                         </div>
+                        <div className="diary-button">
+                            <Link to="/write">
+                                일기 작성하기
+					</Link>
+                        </div>
                     </div>
                 </div>
                 <div className="sidehome">

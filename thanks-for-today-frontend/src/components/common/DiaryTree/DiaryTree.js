@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './DiaryTree.scss';
+import tree from 'images/tree.png';
 
 class DiaryTree extends Component {
 
@@ -16,6 +17,7 @@ class DiaryTree extends Component {
 						내가 자주 사용하는 단어들은?
 						</span>
 				</div>
+				<img src={tree}></img>
 			</div>
 		);
 	}
