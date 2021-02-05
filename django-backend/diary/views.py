@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from .models import *
 
@@ -16,7 +16,8 @@ from zipfile import ZipFile
 from openpyxl import load_workbook
 
 
-from keyword import *
+from NLP.NLP import *
+from NLP.Get_wordcloud import *
 
 @csrf_exempt
 def create(request):
@@ -27,7 +28,7 @@ def create(request):
             weather = request.POST.get("weather")
             body = request.POST.get("body")
 
-            key_sentence, keywords = get_key(sentence)
+            key_sentence, keywords = get_key(title + ' ' + body)
             # keywords = '' # NLP 키워드 추출 부분 적용해야하는 부분
 
 
@@ -142,3 +143,23 @@ def words(request):
                 'message' : 'error',
                 'error' : str(e),
             }, json_dumps_params = {'ensure_ascii': True})
+
+
+def words():
+    qs = Today.objects.all()
+    res = ""
+
+    for i in qs:
+        res += i.title
+        res += ' '
+        res += i.body
+        res += ' '
+    
+    return res
+    
+
+
+def wordcloud(request):
+    # /static/WordCloud_Tree.png
+    # Get_wordcloud(words())
+    return redirect('/static/WordCloud_Tree.png')
