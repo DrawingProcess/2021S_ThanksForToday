@@ -28,7 +28,7 @@ def create(request):
             weather = request.POST.get("weather")
             body = request.POST.get("body")
 
-            key_sentence, keywords = get_key(title + ' ' + body)
+            key_sentence, keywords = Get_keyword(title + ' ' + body)
             # keywords = '' # NLP 키워드 추출 부분 적용해야하는 부분
 
 
@@ -81,7 +81,7 @@ def update(request, pk):
             weather = request.POST.get("weather")
             body = request.POST.get("body")
 
-            keywords = '' # NLP 키워드 추출 부분 적용해야하는 부분
+            key_sentence, keywords = Get_keyword(title + ' ' + body)
 
             this = Today.objects.get(pk=pk)
             this.date = date
