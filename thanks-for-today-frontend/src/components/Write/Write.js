@@ -33,6 +33,15 @@ class Write extends Component {
         if (e.key === "Enter") {
         }
     };
+    onClickSave = (e) => {
+        const { title, date, inputStr } = this.state;
+        let formdata = new FormData();
+        formdata.append("title", title);
+        formdata.append("date", date);
+        formdata.append("inputStr", inputStr);
+        this.props.addDiary(formdata);
+        alert("저장");
+    }
 
     render() {
         const { diary } = this.state;
@@ -42,7 +51,7 @@ class Write extends Component {
                     <button>
                         임시저장
                     </button>
-                    <button>
+                    <button onClick={this.onClickSave}>
                         저장
                     </button>
                 </div>

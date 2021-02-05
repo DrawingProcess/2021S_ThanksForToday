@@ -1,0 +1,27 @@
+@import "styles/base.scss";
+
+//pc, 기본
+.todo {
+    @include flex(column, center, center);
+    width: 100vw;
+    height: 220vh;
+    background: rgba(144, 154, 179, 0.27);
+    background-size: cover;
+    color: #273c63;
+}
+
+//태블릿
+@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) {
+    .home {
+        width: 100vw;
+        height: calc(100vh + 350px);
+    }
+}
+
+//모바일
+@media screen and (max-width: $mobile-max) {
+    .home {
+        width: 100vw;
+        height: calc(100vh + 350px);
+    }
+}

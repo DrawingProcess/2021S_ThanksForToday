@@ -7,9 +7,9 @@ import Write from 'components/Write';
 class WriteContainer extends Component {
 
     addDiary = async (formdata) => {
-        const { DiarydActions } = this.props;
+        const { DiaryActions } = this.props;
         try {
-            await DiarydActions.addDiary(formdata);
+            await DiaryActions.addDiary(formdata);
         } catch (e) {
             console.log("error log:", e);
         }
@@ -39,8 +39,8 @@ class WriteContainer extends Component {
 
 export default connect(
     (state) => ({
-        diaryList: state.board.get("diaryList"),
-        diary: state.board.get("diary"),
+        diaryList: state.diary.get("diaryList"),
+        diary: state.diary.get("diary"),
     }),
     (dispatch) => ({
         DiaryActions: bindActionCreators(diaryActions, dispatch),
