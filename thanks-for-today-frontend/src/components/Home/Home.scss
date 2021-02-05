@@ -3,7 +3,7 @@
 //pc, 기본
 .home {
     width: 100vw;
-    height: calc(100vh + 1000px);
+    height: calc(300vh + 140px);
     @include flex(column, center, center);
     .home-main {
         width: 100vw;
@@ -26,6 +26,17 @@
                     margin-bottom: 25px;
                 }
             }
+            .ai-diary {
+                background: #fff;
+                width: 350px;
+                height: 50px;
+                border-radius: 15px;
+                line-height: 50px;
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+            }
             .home-search {
                 @include flex(row, center, center);
                 margin-top: 45px;
@@ -34,7 +45,7 @@
                     margin-left: 7px;
                     background: #d45382;
                     width: 80px;
-                    height: 43px;
+                    height: 50px;
                     border-radius: 3px;
                     border: none;
                     img {
@@ -56,10 +67,11 @@
         }
     }
     .sidehome {
-        padding-top: 150px;
-        height: 800px;
+        padding-top: 220px;
+        height: 100vh;
     }
     .analysis {
+        height: 100vh;
     }
 }
 
