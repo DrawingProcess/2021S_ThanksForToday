@@ -1,10 +1,20 @@
 # Django 기반 Backend서버
 
-## Django 설치
+## 환경구성
 
-### `pip install django`
+### Django 설치
 
-## 실행
+#### `pip install django`
+
+### DB
+
+#### `python manage.py makemigrations`
+#### `python manage.py migrate`
+
+### konlpy
+konlpy 사용 위해 java, jdk, jpype 설치 필요 => https://beausty23.tistory.com/54 참조
+
+### 실행
 
 ### `python manage.py runserver`
 
