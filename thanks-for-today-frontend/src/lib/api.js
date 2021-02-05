@@ -33,23 +33,23 @@ export const signIn = (username, password) =>
 
 
 //게시판 목록
-export const getBoardList = () =>
+export const getDiaryList = () =>
     axios.get(`${API_BASE_URL}/read`, {
     });
 
 //글추가
-export const addBoard = (formdata) =>
+export const addDiary = (formdata) =>
     axios.post(`${API_BASE_URL}/create`, formdata, {
     });
 
 //글수정
-export const updateBoard = (diary_num, formdata) =>
+export const updateDiary = (diary_num, formdata) =>
     axios.put(
         `${API_BASE_URL}/update/${diary_num}`,
         formdata,
     );
 
 //글 삭제
-export const deleteBoard = (diary_num) =>
+export const deleteDiary = (diary_num) =>
     axios.delete(`${API_BASE_URL}/delete/${diary_num}`, {
     });
