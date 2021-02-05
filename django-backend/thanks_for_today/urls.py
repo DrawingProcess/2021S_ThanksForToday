@@ -23,5 +23,4 @@ urlpatterns = [
     path('read', diary.views.read),
     path('update/<int:pk>', diary.views.update),
     path('delete/<int:pk>', diary.views.delete),
-    path('checkmail', diary.views.checkmail),
 ]
