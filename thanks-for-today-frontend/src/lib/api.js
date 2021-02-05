@@ -61,3 +61,15 @@ export const deleteDiary = (diary_num) =>
     axios.delete(`${API_BASE_URL}/delete/${diary_num}`, {
         config
     });
+
+//WordCloud용 데이터 조회
+export const selectWord = () =>
+    axios.get(`${API_BASE_URL}/words`, {
+        config
+    });
+
+//WordCloud 이미지
+export const wordCloud = () =>
+    axios.get(`${API_BASE_URL}/wordcloud`, {
+        config
+    });

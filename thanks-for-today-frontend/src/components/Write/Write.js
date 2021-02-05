@@ -12,7 +12,7 @@ class Write extends Component {
         super(props);
         this.state = {
             title: '',
-            date: moment().format(),
+            date: moment().format("YYYY-MM-DD"),
             inputStr: '',
         };
     }
@@ -35,9 +35,13 @@ class Write extends Component {
     };
     onClickSave = (e) => {
         const { title, date, inputStr } = this.state;
-        let json = { 'title': title, 'date': date, 'body': inputStr }
-        this.props.addDiary(json);
-        console.log(json);
+        //let json = { 'title': title, 'date': date, 'body': inputStr }
+        let formdata = new FormData();
+        formdata.append("title", title);
+        formdata.append("date", date);
+        formdata.append("body", inputStr);
+        this.props.addDiary(formdata);
+        //console.log(json);
         alert("저장");
     }
 

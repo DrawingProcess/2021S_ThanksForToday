@@ -4,10 +4,38 @@
 .todo {
     @include flex(column, center, center);
     width: 100vw;
-    height: 220vh;
+    height: 100vh;
     background: rgba(144, 154, 179, 0.27);
     background-size: cover;
-    color: #273c63;
+    .todo-title {
+        padding-right: 550px;
+        padding-top: -30px;
+        padding-bottom: 50px;
+        color: #273c63;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .list {
+        @include flex(column, center, flex-start);
+        padding-bottom: 150px;
+        .todo {
+            width: 800px;
+            height: 150px;
+            background: rgba(144, 154, 179, 0);
+            border-bottom: 1px solid #273c63;
+            padding: none;
+            text-align: left;
+            .content {
+                margin-right: 150px;
+                color: #273c63;
+                font-size: 23px;
+                font-weight: bold;
+                span {
+                    font-weight: normal;
+                }
+            }
+        }
+    }
 }
 
 //태블릿

@@ -44,6 +44,7 @@ export default handleActions(
                 //추가된 게시판 정보가 반환됨
                 const data = Map(action.payload.data);
                 console.log("허허api가 들어왔나");
+                alert(JSON.stringify(data));
                 return state
             },
             onFailure: (state, action) => {
