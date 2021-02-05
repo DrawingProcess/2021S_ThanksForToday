@@ -5,6 +5,7 @@
 ### Django 설치
 
 #### `pip install django`
+#### `pip install django-cors-headers`
 
 ### DB
 
@@ -13,6 +14,10 @@
 
 ### konlpy
 konlpy 사용 위해 java, jdk, jpype 설치 필요 => https://beausty23.tistory.com/54 참조
+
+### wordcloud
+#### `pip install wordcloud`
+#### `pip install palettable`
 
 ### 실행
 
