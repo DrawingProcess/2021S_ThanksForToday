@@ -47,16 +47,17 @@ def create(request):
 def read(request):
     try:
         qs = Today.objects.all()
-        qs_json = serializers.serialize('json', qs)
-        return HttpResponse(qs_json, content_type='application/json')
+        res = []
+        for i in qs:
+            res.append({
+                    "id" : 1,
+                    "title": i.title,
+                    "allDay": True,
+                    "start": "new Date(" + str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day) + ")",
+                    "end": "new Date(" + str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day) + ")",
+                })
+        return JsonResponse(res, json_dumps_params = {'ensure_ascii': True}, safe=False)
 
-        # a = list(Today.objects.all())
-        # print(type(a))
-        # return JsonResponse({
-        #         'message' : 'success',
-        #         'list' : a,
-        #     }, json_dumps_params = {'ensure_ascii': True})
-    
     except Exception as e:
         return JsonResponse({
                 'message' : 'error',
