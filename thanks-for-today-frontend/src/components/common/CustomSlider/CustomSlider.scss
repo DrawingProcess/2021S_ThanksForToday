@@ -16,6 +16,17 @@
         .slider-card {
             width: 400px;
             height: 200px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: #273c63;
+            .slider-title {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            .slider-content {
+                font-size: 15px;
+            }
         }
         img {
             width: 200px;

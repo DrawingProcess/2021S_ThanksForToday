@@ -12,9 +12,9 @@ class CustomSlider extends React.Component {
 		super();
 		this.state = {
 			sliders: [
-				'http://img.nowrunning.com/content/movie/2014/Jagga-Jaso/wall_1024x768_01.jpg',
-				'https://alchetron.com/cdn/Cocktail-2012-film-images-6dbd0ec2-2ea4-47aa-88fd-388cabed7f8.jpg',
-				'http://media.glamsham.com/download/wallpaper/movies/images/z/zindagi-na-milegi-dobara-wallpaper-03-12x9.jpg',
+				"ggggg",
+				"ggggg",
+				"ggggg",
 				img1, img2
 			]
 		}
@@ -24,7 +24,12 @@ class CustomSlider extends React.Component {
 		return this.state.sliders.map(data => {
 			return (
 				<div className="slider-card" key={data}>
-					<img alt="image" src={data} />
+					<div className="slider-title">
+						내용들을 넣어봅시다.
+					</div>
+					<div className="slider-content">
+						오늘은 무엇을 했다.
+					</div>
 				</div>
 			)
 		});
