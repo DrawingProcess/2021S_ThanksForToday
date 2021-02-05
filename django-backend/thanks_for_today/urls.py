@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
+from django.conf import settings
 import diary.views
 
 urlpatterns = [
@@ -24,4 +26,7 @@ urlpatterns = [
     path('update/<int:pk>', diary.views.update),
     path('delete/<int:pk>', diary.views.delete),
     path('words', diary.views.words),
+    path('wordcloud', diary.views.wordcloud),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
