@@ -98,7 +98,7 @@ GET /delete/ (int: pk)
 
 ## WordCloud용 데이터 조회
 
-GET /words/ (int: pk)
+GET /words
 
 사용자가 생성한 모든 단어 데이터를 조회합니다
 
