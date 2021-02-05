@@ -55,7 +55,7 @@ def read(request):
         res = []
         for i in qs:
             res.append({
-                    "id" : 1,
+                    "id" : i.pk,
                     "title": i.title,
                     "allDay": True,
                     "start": "new Date(" + str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day) + ")",
