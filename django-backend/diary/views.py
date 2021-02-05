@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from .models import *
 
@@ -16,18 +16,19 @@ from zipfile import ZipFile
 from openpyxl import load_workbook
 
 
-from keyword import *
+from NLP.NLP import *
+from NLP.Get_wordcloud import *
 
 @csrf_exempt
 def create(request):
     if request.method == "POST":
         try:
-            date = request.POST.get("date")
+            date = request.POST.get("date")[:10]
             title = request.POST.get("title")
             weather = request.POST.get("weather")
             body = request.POST.get("body")
 
-            key_sentence, keywords = get_key(sentence)
+            key_sentence, keywords = Get_keyword(str(title) + ' ' + str(body))
             # keywords = '' # NLP 키워드 추출 부분 적용해야하는 부분
 
 
@@ -54,7 +55,7 @@ def read(request):
         res = []
         for i in qs:
             res.append({
-                    "id" : 1,
+                    "id" : i.pk,
                     "title": i.title,
                     "allDay": True,
                     "start": "new Date(" + str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day) + ")",
@@ -75,12 +76,12 @@ def update(request, pk):
     if request.method == "POST":
         try:
             # pk = request.POST.get("pk")
-            date = request.POST.get("date")
+            date = request.POST.get("date")[:10]
             title = request.POST.get("title")
             weather = request.POST.get("weather")
             body = request.POST.get("body")
 
-            keywords = '' # NLP 키워드 추출 부분 적용해야하는 부분
+            key_sentence, keywords = Get_keyword(str(title) + ' ' + str(body))
 
             this = Today.objects.get(pk=pk)
             this.date = date
@@ -142,3 +143,23 @@ def words(request):
                 'message' : 'error',
                 'error' : str(e),
             }, json_dumps_params = {'ensure_ascii': True})
+
+
+def words():
+    qs = Today.objects.all()
+    res = ""
+
+    for i in qs:
+        res += i.title
+        res += ' '
+        res += i.body
+        res += ' '
+    
+    return res
+    
+
+
+def wordcloud(request):
+    # /static/WordCloud_Tree.png
+    # Get_wordcloud(words())
+    return redirect('/static/WordCloud_Tree.png')
