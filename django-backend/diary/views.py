@@ -23,12 +23,12 @@ from NLP.Get_wordcloud import *
 def create(request):
     if request.method == "POST":
         try:
-            date = request.POST.get("date")
+            date = request.POST.get("date")[:10]
             title = request.POST.get("title")
             weather = request.POST.get("weather")
             body = request.POST.get("body")
 
-            key_sentence, keywords = Get_keyword(title + ' ' + body)
+            key_sentence, keywords = Get_keyword(str(title) + ' ' + str(body))
             # keywords = '' # NLP 키워드 추출 부분 적용해야하는 부분
 
 
@@ -76,12 +76,12 @@ def update(request, pk):
     if request.method == "POST":
         try:
             # pk = request.POST.get("pk")
-            date = request.POST.get("date")
+            date = request.POST.get("date")[:10]
             title = request.POST.get("title")
             weather = request.POST.get("weather")
             body = request.POST.get("body")
 
-            key_sentence, keywords = Get_keyword(title + ' ' + body)
+            key_sentence, keywords = Get_keyword(str(title) + ' ' + str(body))
 
             this = Today.objects.get(pk=pk)
             this.date = date
