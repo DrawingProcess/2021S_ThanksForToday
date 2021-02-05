@@ -17,18 +17,27 @@
 		.logo {
 			width: 10%;
 			color: black;
-			margin-left: 100px;
 		}
 		.list {
 			@include flex(row, space-between, center);
-			width: 40%;
-			margin-right: 300px;
+			width: 30%;
+			margin-right: 280px;
 			a {
 				color: #ffffff;
 				text-decoration: none;
 				&:hover {
 					font-weight: bold;
 					border-bottom: 1px solid #ffffff;
+				}
+			}
+			&.dark {
+				a {
+					color: #273c63;
+					text-decoration: none;
+					&:hover {
+						font-weight: bold;
+						border-bottom: 1px solid #273c63;
+					}
 				}
 			}
 		}
@@ -52,11 +61,39 @@
 //태블릿
 @media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) {
 	.header {
+		position: fixed;
+		.list {
+			@include flex(row, center, center);
+			width: 100%;
+			margin-right: 280px;
+			a {
+				color: #ffffff;
+				text-decoration: none;
+				&:hover {
+					font-weight: bold;
+					border-bottom: 1px solid #ffffff;
+				}
+			}
+		}
 	}
 }
 
 //모바일
 @media screen and (max-width: $mobile-max) {
 	.header {
+		position: fixed;
+		.list {
+			@include flex(row, center, center);
+			width: 100%;
+			margin-right: 280px;
+			a {
+				color: #ffffff;
+				text-decoration: none;
+				&:hover {
+					font-weight: bold;
+					border-bottom: 1px solid #ffffff;
+				}
+			}
+		}
 	}
 }

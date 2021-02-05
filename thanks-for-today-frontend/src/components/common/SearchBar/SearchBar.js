@@ -26,7 +26,7 @@ const SearchBar = ({
 					id="searchWord"
 					value={searchWord}
 					onChange={handleChange}
-					placeholder="#해시태그를 이용해 정리할 수 있습니다."
+					placeholder="#해시태그 이용"
 				/>
 			</div>
 		</div>

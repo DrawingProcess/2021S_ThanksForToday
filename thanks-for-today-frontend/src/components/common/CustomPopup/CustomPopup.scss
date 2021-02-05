@@ -1,0 +1,13 @@
+@import "styles/base.scss";
+
+.custompopup {
+    .text {
+        font-size: 30px;
+        font-weight: bold;
+        color: #273c63;
+        span {
+            font-size: 15px;
+            font-weight: normal;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@import "styles/base.scss";
+
+//pc, 기본
+.info {
+    @include flex(column, center, center);
+    width: 100vw;
+    height: 220vh;
+    background: rgba(144, 154, 179, 0.27);
+    background-size: cover;
+    color: #273c63;
+    .info-content {
+        .section-one {
+            padding-left: 100px;
+            padding-top: 150px;
+            padding-bottom: 150px;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: left;
+            .title {
+                font-weight: normal;
+                font-size: 20px;
+            }
+        }
+        .section-two {
+            @include flex(row, space-around, center);
+            padding-bottom: 200px;
+            .hashtag {
+                padding-left: 100px;
+                font-weight: bold;
+                font-size: 30px;
+                text-align: left;
+                padding-right: 200px;
+            }
+            .description {
+                text-align: left;
+            }
+        }
+        .section-three {
+            border-top: 1px solid #707070;
+            padding-top: 100px;
+            .circle-area {
+                @include flex(row, space-around, center);
+                .circle {
+                    background-color: #ffffff;
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 75px;
+                    text-align: center;
+                    margin: 0 auto;
+                    font-size: 15px;
+                    font-weight: bold;
+                    vertical-align: middle;
+                    line-height: 150px;
+                    box-shadow: 2px 2px 5px #999;
+                }
+            }
+            .description {
+                padding-top: 200px;
+                padding-bottom: 200px;
+                padding-left: 50px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+//태블릿
+@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) {
+    .info {
+        width: 100vw;
+        height: calc(100vh + 350px);
+    }
+}
+
+//모바일
+@media screen and (max-width: $mobile-max) {
+    .info {
+        width: 100vw;
+        height: calc(100vh + 350px);
+    }
+}
