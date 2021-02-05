@@ -3,16 +3,40 @@ import React, { Component } from 'react';
 import './Home.scss';
 import SearchBar from "components/common/SearchBar";
 import searchIcon from "images/search.png";
-import Calendar from 'react-calendar';
-import Slider from "react-slick";
-import 'react-calendar/dist/Calendar.css';
+import { Calendar, momentLocalizer } from 'react-big-calendar'
+import moment from 'moment';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+
+const localizer = momentLocalizer(moment)
+
 
 class Home extends Component {
     constructor(props) {
         super(props);
+        const now = new Date();
+        const events = [
+            {
+                id: 0,
+                title: 'All Day Event very long title',
+                allDay: true,
+                start: new Date(2019, 6, 0),
+                end: new Date(2019, 6, 1),
+            },
+            {
+                id: 1,
+                title: 'Long Event',
+                start: new Date(2019, 3, 7),
+                end: new Date(2019, 3, 10),
+            },
+            {
+                id: 2,
+                title: 'Right now Time Event',
+                start: now,
+                end: now,
+            },
+        ]
         this.state = {
-            value: new Date(),
-            onChange: new Date()
+            events
         };
     }
 
@@ -36,10 +60,15 @@ class Home extends Component {
                         </button>
                     </div>
                     <div className="home-calendar">
-                        <Calendar
-                            onChange={this.onChange}
-                            value={this.value}
-                        />
+                        <div style={{ width: '750px', height: '300px', background: 'white' }}>
+                            <Calendar
+                                events={this.state.events}
+                                startAccessor="start"
+                                endAccessor="end"
+                                defaultDate={moment().toDate()}
+                                localizer={localizer}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
