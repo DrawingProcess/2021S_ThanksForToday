@@ -1,0 +1,67 @@
+@import "styles/base.scss";
+
+//pc, 기본
+.write {
+    @include flex(column, center, center);
+    width: 100vw;
+    height: calc(100vh + 120px);
+    background: rgba(144, 154, 179, 0.27);
+    background-size: cover;
+    padding-top: 70px;
+    padding-bottom: 80px;
+    .button-area {
+        margin-left: 50%;
+        margin-bottom: 20px;
+        button {
+            margin-left: 4px;
+            width: 70px;
+            height: 30px;
+            background: #ff597a;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+    }
+    .icon {
+        width: 60%;
+        height: 40px;
+        background: #fff;
+        border-radius: 5px 5px 0 0;
+    }
+    .title {
+        width: 60%;
+        height: 40px;
+        background: #fff;
+        input {
+            padding-left: 12px;
+            width: 70%;
+            height: 40px;
+            background: #ffffff;
+            font-size: 15px;
+            border: none;
+            box-sizing: border-box;
+            letter-spacing: -0.05em;
+        }
+    }
+    .editor-area {
+        background: #fff;
+        width: 60%;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+//태블릿
+@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) {
+    .home {
+        width: 100vw;
+        height: calc(100vh + 350px);
+    }
+}
+
+//모바일
+@media screen and (max-width: $mobile-max) {
+    .home {
+        width: 100vw;
+        height: calc(100vh + 350px);
+    }
+}

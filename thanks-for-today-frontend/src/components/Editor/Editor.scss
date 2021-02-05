@@ -1,0 +1,73 @@
+@import "styles/base.scss";
+
+.editor {
+    .editor-photo-btn {
+        background: #f2f2f2;
+        margin-bottom: 0;
+        .btn-photo {
+            @include flex(row, space-around, center);
+            width: 132px;
+            height: 40px;
+            font-size: 16px;
+            font-weight: bold;
+            background: black;
+            color: #fff;
+            img {
+                width: 28px;
+                height: 27px;
+            }
+        }
+    }
+    .ql-container {
+        width: 579px;
+        min-height: 289px;
+        background: #fff;
+        img {
+            max-width: 500px;
+        }
+        &.ql-disabled {
+            background: inherit;
+        }
+    }
+    &.read-only {
+        .ql-container {
+            min-height: 100px;
+        }
+    }
+}
+
+//태블릿, 모바일 공통
+@media screen and (max-width: $tablet-max) {
+    .editor {
+        .ql-container {
+            width: 701px;
+            min-height: 451px;
+            img {
+                max-width: 610px;
+            }
+        }
+        &.read-only {
+            .ql-container {
+                min-height: 100px;
+            }
+        }
+    }
+}
+
+//모바일
+@media screen and (max-width: $mobile-max) {
+    .editor {
+        .ql-container {
+            width: 321px;
+            min-height: 336px;
+            img {
+                max-width: 250px;
+            }
+        }
+        &.read-only {
+            .ql-container {
+                min-height: 100px;
+            }
+        }
+    }
+}
