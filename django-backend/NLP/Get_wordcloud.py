@@ -29,7 +29,7 @@ def Get_wordcloud(sentence):
 
     # 불용어 제거
     stopwords = []
-    with open("./StopWord.txt", 'rt', encoding='UTF8') as f:
+    with open("./NLP/StopWord.txt", 'rt', encoding='UTF8') as f:
         while True:
             line = f.readline().rstrip('\n')
             if not line: break
