@@ -1,0 +1,40 @@
+@import "styles/base.scss";
+
+//pc, 기본
+.customcalendar {
+    @include flex(column, center, center);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    padding-top: 150px;
+    padding-bottom: 200px;
+    .write-diary {
+        margin-left: 800px;
+        margin-bottom: 20px;
+        a {
+            color: black;
+            text-decoration: none;
+        }
+    }
+    .calendar-style {
+        width: 1000px;
+        height: 800px;
+        background: white;
+    }
+}
+
+//태블릿
+@media screen and (min-width: $mobile-max+1px) and (max-width: $tablet-max) {
+    .home {
+        width: 100vw;
+        height: calc(100vh + 350px);
+    }
+}
+
+//모바일
+@media screen and (max-width: $mobile-max) {
+    .home {
+        width: 100vw;
+        height: calc(100vh + 350px);
+    }
+}
