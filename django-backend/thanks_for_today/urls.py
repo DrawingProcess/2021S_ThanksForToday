@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import diary.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('create', diary.views.create),
+    path('read', diary.views.read),
+    path('update/<int:pk>', diary.views.update),
+    path('delete/<int:pk>', diary.views.delete),
 ]
