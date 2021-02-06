@@ -4,9 +4,9 @@
 
 ![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-01.jpg)
 
-[시연영상](https://youtu.be/cevoZZ-MPNA)   
+[프로젝트Info](https://swhackathon.com/Team/Info/39)   
 [발표영상](https://youtu.be/JZqDV9e2_E4)   
-[프로젝트 ](https://swhackathon.com/Team/Info/39)
+[시연영상](https://youtu.be/cevoZZ-MPNA)   
 
 #### SW중심대학 공동해커톤
 
