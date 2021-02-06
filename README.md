@@ -6,6 +6,8 @@
 
 [시연영상](https://youtu.be/cevoZZ-MPNA)
 
+[발표영상](https://youtu.be/JZqDV9e2_E4)
+
 #### SW중심대학 공동해커톤
 
 행사명: SW중심대학 공동해커톤
