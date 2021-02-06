@@ -178,7 +178,7 @@ def words():
     return res
     
 
-
+@csrf_exempt
 def wordcloud(request):
     # /static/WordCloud_Tree.png
     Get_wordcloud(words())
