@@ -3,7 +3,7 @@
 //pc, 기본
 .home {
     width: 100vw;
-    height: calc(300vh + 140px);
+    height: calc(300vh + 200px);
     @include flex(column, center, center);
     .home-main {
         width: 100vw;

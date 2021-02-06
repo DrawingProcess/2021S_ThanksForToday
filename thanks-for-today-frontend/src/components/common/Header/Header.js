@@ -16,7 +16,7 @@ const Header = ({ ismain }) => {
                         MAIN
 					</Link>
                     <Link to="/todo">
-                        TODO
+                        일기목록
 					</Link>
                     <Link to="/calendar">
                         거대 캘린더

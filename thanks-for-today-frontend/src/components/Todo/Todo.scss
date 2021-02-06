@@ -4,12 +4,11 @@
 .todo {
     @include flex(column, center, center);
     width: 100vw;
-    height: 100vh;
     background: rgba(144, 154, 179, 0.27);
     background-size: cover;
     .todo-title {
         padding-right: 550px;
-        padding-top: -30px;
+        padding-top: 150px;
         padding-bottom: 50px;
         color: #273c63;
         font-size: 25px;
@@ -17,8 +16,9 @@
     }
     .list {
         @include flex(column, center, flex-start);
-        padding-bottom: 150px;
+        margin-bottom: 180px;
         .todo {
+            position: relative;
             width: 800px;
             height: 150px;
             background: rgba(144, 154, 179, 0);

@@ -53,7 +53,7 @@ class Home extends Component {
                     <CustomSlider />
                 </div>
                 <div className="analysis">
-                    <DiaryTree />
+                    <DiaryTree wordCloud={this.props.wordCloud} />
                 </div>
             </div>
         )

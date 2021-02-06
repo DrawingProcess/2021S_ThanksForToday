@@ -40,9 +40,11 @@ class Write extends Component {
         formdata.append("title", title);
         formdata.append("date", date);
         formdata.append("body", inputStr);
+        formdata.append("weather", "sunny");
         this.props.addDiary(formdata);
         //console.log(json);
         alert("저장");
+        this.props.history.push("/calendar");
     }
 
     render() {
