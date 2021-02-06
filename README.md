@@ -8,6 +8,8 @@
 
 [발표영상](https://youtu.be/JZqDV9e2_E4)
 
+[프로젝트 ](https://swhackathon.com/Team/Info/39)
+
 #### SW중심대학 공동해커톤
 
 행사명: SW중심대학 공동해커톤
