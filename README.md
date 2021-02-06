@@ -1,4 +1,21 @@
-팀명 : Thanks For Today
+# Thanks For Today: 나를 알려주는 스마트한 일기장
+당신에 대해 잘 알아갈 수 있는 스마트한 일기장
+
+#### SW중심대학 공동해커톤
+
+행사명: SW중심대학 공동해커톤
+
+일시: 2021.2.4~6 (목~토)
+
+## 소개
+당신은 자신을 잘 알고 있나요?
+
+당신의 소중한 일상을 기록하고
+
+당신이 무엇을 좋아하는지, 어떤 사람인지 알아가 봅시다.
+
+당신을 더 잘 알아갈 수 있는 일기장 "Thanks For Today"
+
 
 나를 알려주는 스마트한 일기장: 
 
@@ -32,22 +49,46 @@
 
 자신보다 더욱 잘 알고 있는 플렛폼 '나를 알려주는 스마트한 일기장'
 
-Developer
 
-최은지: Web front-end -> react
+## 서비스
 
-박정섭: Web back-end -> Javascript, Node.js ( Express ), Python
+![서비스](./Docs/img/Thanks for Today 마무리_최종-15.jpg)
+![서비스](./Docs/img/Thanks for Today 마무리_최종-16.jpg)
+![서비스](./Docs/img/Thanks for Today 마무리_최종-17.jpg)
+![서비스](./Docs/img/Thanks for Today 마무리_최종-18.jpg)
+![서비스](./Docs/img/Thanks for Today 마무리_최종-19.jpg)
 
-금빛나: NLP (word embedding, text classification,,,) -> Python
+## :computer: 기술 스택
 
-최성준: NLP (word embedding, text classification,,,) -> Python
+### Natural Language Processing
+Python ('summa', 'hanspell', 'WordCloud', 'koNLPy-gRPC(커먼컴퓨터 API)')
 
-Designer
+### Front
+React
 
-권나영: Web Design -> Ps, Ai, Adobe Xd
+### Backend
+Python Django
+
+[REST API 문서](https://github.com/seongjunChoi0714/ThanksForToday/blob/master/django-backend/README.md)
 
 
-02.04. 23:00
+## :busts_in_silhouette:팀원
+
+- 최성준 경희대학교 (개발자, 팀장) [@seongjunChoi0714](https://github.com/seongjunChoi0714) NLP (word embedding, text classification,,,) -> Python
+
+- 권나영 선문대학교 (디자이너) Web Design -> Ps, Ai, Adobe Xd
+
+- 금빛나 광운대학교 (개발자) [@BitnaKeum](https://github.com/BitnaKeum) NLP (word embedding, text classification,,,) -> Python
+
+- 박정섭 국민대학교 (개발자) [@ParkJeongseop](https://github.com/ParkJeongseop) Web back-end -> Python
+
+- 최은지 동국대학교 (개발자) [@choieunii](https://github.com/choieunii) Web front-end -> react
+
+
+
+
+
+### 02.04. 23:00
 
 권나영: 로고 디자인, 웹 디자인 - Adobe Xd(수정사항 반영완료)
 
@@ -60,7 +101,7 @@ Designer
 최은지: Xd기반 웹 프론트 틀 마련.
 
 
-02.05. 13:00
+### 02.05. 13:00
 
 권나영: 일기쓰는 화면, 일기 리스트 화면 디자인
 
@@ -73,7 +114,7 @@ Designer
 최은지: Xd기반 웹 프론트 CSS 완료
 
 
-02.05. 19:00
+### 02.05. 19:00
 
 
 권나영: 웹 최종 디자인 수정, 발표자료 디자인
