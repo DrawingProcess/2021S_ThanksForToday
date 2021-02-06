@@ -1,6 +1,9 @@
 # Thanks For Today: 나를 알려주는 스마트한 일기장
 당신에 대해 잘 알아갈 수 있는 스마트한 일기장
 
+
+![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-01.jpg)
+
 #### SW중심대학 공동해커톤
 
 행사명: SW중심대학 공동해커톤
@@ -52,7 +55,7 @@
 
 ## 서비스
 
-![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-01.jpg)
+![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-15.jpg)
 ![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-16.jpg)
 ![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-17.jpg)
 ![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-18.jpg)
