@@ -49,22 +49,37 @@ def create(request):
 
 
 
-def read(request, pk):
+def read(request):
     try:
-        if pk:
-            qs = Today.objects.get(pk=pk)
-        else:
-            qs = Today.objects.all()
+        qs = Today.objects.all()
         res = []
         for i in qs:
             res.append({
                     "id" : i.pk,
                     "title": i.title,
                     "allDay": True,
-                    "start": "new Date(" + str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day) + ")",
-                    "end": "new Date(" + str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day) + ")",
+                    "start": str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day),
+                    "end": str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day),
                 })
         return JsonResponse(res, json_dumps_params = {'ensure_ascii': True}, safe=False)
+
+    except Exception as e:
+        return JsonResponse({
+                'message' : 'error',
+                'error' : str(e),
+            }, json_dumps_params = {'ensure_ascii': True})
+
+
+def readone(request, pk):
+    try:
+        i = Today.objects.get(pk=pk)
+        return JsonResponse({
+                    "id" : i.pk,
+                    "title": i.title,
+                    "allDay": True,
+                    "start": str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day),
+                    "end": str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day),
+                }, json_dumps_params = {'ensure_ascii': True}, safe=False)
 
     except Exception as e:
         return JsonResponse({

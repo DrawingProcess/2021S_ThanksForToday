@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('create', diary.views.create),
     path('read', diary.views.read),
+    path('read/<int:pk>', diary.views.readone),
     path('update/<int:pk>', diary.views.update),
     path('delete/<int:pk>', diary.views.delete),
     path('words', diary.views.words),

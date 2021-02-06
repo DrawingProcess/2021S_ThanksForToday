@@ -68,8 +68,8 @@ GET /read
     "id": 1,
     "title": "오늘은 열공한",
     "allDay": true,
-    "start": "new Date(2021,2,1)",
-    "end": "new Date(2021,2,1)"
+    "start": "2021,2,1",
+    "end": "2021,2,1"
   }
 ]
 ```
@@ -86,15 +86,13 @@ GET /read/ (int: pk)
 
 반환 예시:
 ```
-[
-  {
-    "id": 1,
-    "title": "오늘은 열공한",
-    "allDay": true,
-    "start": "new Date(2021,2,1)",
-    "end": "new Date(2021,2,1)"
-  }
-]
+{
+  "id": 1,
+  "title": "오늘은 열공한",
+  "allDay": true,
+  "start": "2021,2,1",
+  "end": "2021,2,1"
+}
 ```
 
 
