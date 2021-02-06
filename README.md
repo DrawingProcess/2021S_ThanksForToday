@@ -4,15 +4,15 @@
 
 ![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-01.jpg)
 
-[시연영상](https://youtu.be/cevoZZ-MPNA)
-[발표영상](https://youtu.be/JZqDV9e2_E4)
+[시연영상](https://youtu.be/cevoZZ-MPNA)   
+[발표영상](https://youtu.be/JZqDV9e2_E4)   
 [프로젝트 ](https://swhackathon.com/Team/Info/39)
 
 #### SW중심대학 공동해커톤
 
 행사명: SW중심대학 공동해커톤
 
-일시: 2021.2.4~6 (목~토)
+일시: 2021.2.4 - 2.6. (목~토)
 
 ## 소개
 당신은 자신을 잘 알고 있나요?
