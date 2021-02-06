@@ -4,6 +4,8 @@
 
 ![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-01.jpg)
 
+[시연영상](https://youtu.be/cevoZZ-MPNA)
+
 #### SW중심대학 공동해커톤
 
 행사명: SW중심대학 공동해커톤
