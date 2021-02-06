@@ -75,6 +75,29 @@ GET /read
 ```
 
 
+## 특정 글 조회
+
+GET /read/ (int: pk)
+
+모든 글 또는 조건에 맞는 글을 조회합니다
+
+매개변수:
+없음
+
+반환 예시:
+```
+[
+  {
+    "id": 1,
+    "title": "오늘은 열공한",
+    "allDay": true,
+    "start": "new Date(2021,2,1)",
+    "end": "new Date(2021,2,1)"
+  }
+]
+```
+
+
 ## 글 수정
 
 POST /update/ (int: pk)

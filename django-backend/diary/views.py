@@ -16,8 +16,8 @@ from zipfile import ZipFile
 from openpyxl import load_workbook
 
 
-from NLP.NLP import *
-from NLP.Get_wordcloud import *
+from diary.asas import *
+from diary.Get_wordcloud import *
 
 @csrf_exempt
 def create(request):
@@ -49,9 +49,12 @@ def create(request):
 
 
 
-def read(request):
+def read(request, pk):
     try:
-        qs = Today.objects.all()
+        if pk:
+            qs = Today.objects.get(pk=pk)
+        else:
+            qs = Today.objects.all()
         res = []
         for i in qs:
             res.append({
@@ -161,5 +164,5 @@ def words():
 
 def wordcloud(request):
     # /static/WordCloud_Tree.png
-    # Get_wordcloud(words())
+    Get_wordcloud(words())
     return redirect('/static/WordCloud_Tree.png')

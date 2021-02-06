@@ -10,6 +10,7 @@ import requests
 # 커먼컴퓨터 API 'KoNLPy-gRPC' 이용
 # 명사 추출 (Mecab 형태소 분석기)
 def Get_noun_list(sentence):
+    print(sentence)
     headers = {
         'accept': 'application/json',
         'Content-Type': 'application/json',
@@ -22,6 +23,8 @@ def Get_noun_list(sentence):
     response = requests.post('https://master-ko-nl-py-g-rpc-minhoryang.endpoint.ainize.ai/v0alpha/mecab/nouns',
                              headers=headers, data=data.encode('utf-8'))
     response_data = response.json()
+    print(data)
+    print(response_data)
     return response_data['results']
 
 
@@ -48,7 +51,7 @@ def Preprocessing(sentence):
     # 불용어 제거
     pre_sent2_list = pre_sent2.split(' ')
     pre_sent3 = ""
-    with open("./StopWord.txt", 'rt', encoding='UTF8') as f:
+    with open("./diary/StopWord.txt", 'rt', encoding='UTF8') as f:
         stopwords = f.read().split('\n')  # 리스트
         f.close()
     for word in pre_sent2_list:
