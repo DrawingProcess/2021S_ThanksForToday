@@ -9,6 +9,7 @@ class DiaryTree extends Component {
 	}
 
 	render() {
+		console.log(this.props.wordCloud);
 		return (
 			<div className="diarytree">
 				<div className="text">

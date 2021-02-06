@@ -1,13 +1,27 @@
 @import "styles/base.scss";
 
 .custompopup {
-    .text {
-        font-size: 30px;
-        font-weight: bold;
-        color: #273c63;
-        span {
-            font-size: 15px;
-            font-weight: normal;
-        }
+  @include flex(column, space-around, center);
+  width: "500px";
+  height: "300px";
+  .title {
+    font-size: 25px;
+    font-weight: bold;
+    color: hsl(219, 43%, 27%);
+    margin: 10px 0;
+    span {
+      font-size: 15px;
+      font-weight: normal;
     }
+  }
+  .content {
+    min-height: 190px;
+    fontsize: "20px";
+  }
+  .hashtag {
+    font-size: 25px;
+    font-weight: bold;
+    color: hsl(219, 43%, 27%);
+    margin: 10px 0;
+  }
 }

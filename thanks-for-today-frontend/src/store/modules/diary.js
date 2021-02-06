@@ -20,8 +20,9 @@ export const wordCloud = createAction(WORD_CLOUD, api.wordCloud); //워드 클�
 
 /* 초기 상태 정의 */
 const initialState = Map({
-    diaryList: List([]),
+    diaryList: Map([]),
     diary: '',
+    wordCloud: '',
 });
 
 /* reducer + pender */
@@ -31,7 +32,8 @@ export default handleActions(
             type: LIST_DIARY,
             onSuccess: (state, action) => {
                 const data = action.payload.data;
-                return state.set("diaryList", List(data));
+                console.log(data + "fffff");
+                return state.set("diaryList", data);
             },
             onFailure: (state, action) => {
                 const data = action.payload.response.data;
@@ -88,7 +90,9 @@ export default handleActions(
             type: WORD_CLOUD,
             onSuccess: (state, action) => {
                 alert("word_cloud");
-                return state;
+                const data = Map(action.payload.data);
+                console.log(data);
+                return state.set("wordCloud", data);
             },
             onFailure: (state, action) => {
                 const data = action.payload.response.data;
