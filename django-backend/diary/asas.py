@@ -55,7 +55,6 @@ def Preprocessing(sentence):
     pre_sent3 = ""
 
     with open("./diary/StopWord.txt", 'rt', encoding='UTF8') as f:
-=======
         stopwords = f.read().split('\n')  # 리스트
         f.close()
     for word in pre_sent2_list:
