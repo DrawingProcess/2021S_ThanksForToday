@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+#-*- coding: utf-8 -*-
 
 from summa import keywords
 from hanspell import spell_checker
@@ -6,9 +6,11 @@ import re
 from collections import Counter
 import requests
 
+import json
 
 # 커먼컴퓨터 API 'KoNLPy-gRPC' 이용
 # 명사 추출 (Mecab 형태소 분석기)
+
 def Get_noun_list(sentence):
     print(sentence)
     headers = {
@@ -51,7 +53,9 @@ def Preprocessing(sentence):
     # 불용어 제거
     pre_sent2_list = pre_sent2.split(' ')
     pre_sent3 = ""
+
     with open("./diary/StopWord.txt", 'rt', encoding='UTF8') as f:
+=======
         stopwords = f.read().split('\n')  # 리스트
         f.close()
     for word in pre_sent2_list:
@@ -68,8 +72,9 @@ def Get_keyword(sentence):
 
     key_word = keywords.keywords(pre_sent, ratio=0.3)  # 핵심 단어 30% 추출   (문자열)
     key_word = ' '.join(key_word.splitlines())  # keywords() 함수에서 생긴 개행 문자들 제거
-
-    key_word_noun = Get_noun_list(key_word)  # 핵심 단어에서 명사만 추출 (리스트)
+    
+    #key_word_noun = Get_noun_list(key_word)  # 핵심 단어에서 명사만 추출 (리스트)
+    key_word_noun = key_word.split(' ') # 임시 코드
 
     for i, noun in enumerate(key_word_noun):  # 한 글자인 단어는 제거
         if len(noun) < 2:
@@ -100,7 +105,8 @@ def Get_keyword(sentence):
 # 빈도 수 높은 단어 추출
 def frequent_list(sentence, word_num):
     pre_sent = Preprocessing(sentence)  # 전처리
-    noun_list = Get_noun_list(pre_sent)  # 명사만 추출
+    #noun_list = Get_noun_list(pre_sent)  # 명사만 추출
+    noun_list = pre_sent.split(' ')  # 임시 코드
 
     for noun in noun_list:  # 한 글자인 단어는 제거  (완벽히 제거 안됨)
         if len(noun) < 2:
