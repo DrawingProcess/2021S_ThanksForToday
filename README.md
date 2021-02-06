@@ -52,11 +52,11 @@
 
 ## 서비스
 
-![서비스](./Docs/img/Thanks for Today 마무리_최종-15.jpg)
-![서비스](./Docs/img/Thanks for Today 마무리_최종-16.jpg)
-![서비스](./Docs/img/Thanks for Today 마무리_최종-17.jpg)
-![서비스](./Docs/img/Thanks for Today 마무리_최종-18.jpg)
-![서비스](./Docs/img/Thanks for Today 마무리_최종-19.jpg)
+![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-01.jpg)
+![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-16.jpg)
+![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-17.jpg)
+![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-18.jpg)
+![서비스](./Docs/img/Thanks%20for%20Today%20마무리_최종-19.jpg)
 
 ## :computer: 기술 스택
 
