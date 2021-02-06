@@ -63,6 +63,7 @@ GET /read
     "allDay": true,
     "start": "new Date(2021,2,1)",
     "end": "new Date(2021,2,1)"
+    "keyword": ""
   },
   {
     "id": 1,
@@ -70,6 +71,7 @@ GET /read
     "allDay": true,
     "start": "2021,2,1",
     "end": "2021,2,1"
+    "keyword": ""
   }
 ]
 ```
@@ -92,6 +94,7 @@ GET /read/ (int: pk)
   "allDay": true,
   "start": "2021,2,1",
   "end": "2021,2,1"
+  "keyword": ""
 }
 ```
 

@@ -60,6 +60,7 @@ def read(request):
                     "allDay": True,
                     "start": str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day),
                     "end": str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day),
+                    "keyword": i.keywords
                 })
         return JsonResponse(res, json_dumps_params = {'ensure_ascii': True}, safe=False)
 
@@ -79,6 +80,7 @@ def readone(request, pk):
                     "allDay": True,
                     "start": str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day),
                     "end": str(i.date.year) + ',' + str(i.date.month) + ',' + str(i.date.day),
+                    "keyword": i.keywords
                 }, json_dumps_params = {'ensure_ascii': True}, safe=False)
 
     except Exception as e:
