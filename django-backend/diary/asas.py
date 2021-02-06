@@ -8,11 +8,11 @@ import requests
 
 import json
 
+
 # 커먼컴퓨터 API 'KoNLPy-gRPC' 이용
 # 명사 추출 (Mecab 형태소 분석기)
-
 def Get_noun_list(sentence):
-    print(sentence)
+    #print(sentence)
     headers = {
         'accept': 'application/json',
         'Content-Type': 'application/json',
@@ -25,8 +25,8 @@ def Get_noun_list(sentence):
     response = requests.post('https://master-ko-nl-py-g-rpc-minhoryang.endpoint.ainize.ai/v0alpha/mecab/nouns',
                              headers=headers, data=data.encode('utf-8'))
     response_data = response.json()
-    print(data)
-    print(response_data)
+    #print(data)
+    #print(response_data)
     return response_data['results']
 
 
@@ -72,8 +72,8 @@ def Get_keyword(sentence):
     key_word = keywords.keywords(pre_sent, ratio=0.3)  # 핵심 단어 30% 추출   (문자열)
     key_word = ' '.join(key_word.splitlines())  # keywords() 함수에서 생긴 개행 문자들 제거
     
-    #key_word_noun = Get_noun_list(key_word)  # 핵심 단어에서 명사만 추출 (리스트)
-    key_word_noun = key_word.split(' ') # 임시 코드
+    key_word_noun = Get_noun_list(key_word)  # 핵심 단어에서 명사만 추출 (리스트)
+    #key_word_noun = key_word.split(' ') # 임시 코드
 
     for i, noun in enumerate(key_word_noun):  # 한 글자인 단어는 제거
         if len(noun) < 2:
@@ -104,8 +104,8 @@ def Get_keyword(sentence):
 # 빈도 수 높은 단어 추출
 def frequent_list(sentence, word_num):
     pre_sent = Preprocessing(sentence)  # 전처리
-    #noun_list = Get_noun_list(pre_sent)  # 명사만 추출
-    noun_list = pre_sent.split(' ')  # 임시 코드
+    noun_list = Get_noun_list(pre_sent)  # 명사만 추출
+    #noun_list = pre_sent.split(' ')  # 임시 코드
 
     for noun in noun_list:  # 한 글자인 단어는 제거  (완벽히 제거 안됨)
         if len(noun) < 2:
