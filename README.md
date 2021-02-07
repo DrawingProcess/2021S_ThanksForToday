@@ -69,6 +69,8 @@ Python Django
 
 ## :busts_in_silhouette:팀원
 
+![프로젝트 참가자](./Docs/img/프로젝트참가자.PNG)
+
 - 최성준 경희대학교 (개발자, 팀장) [@seongjunChoi0714](https://github.com/seongjunChoi0714) NLP (word embedding, text classification,,,) -> Python
 
 - 권나영 선문대학교 (디자이너) Web Design -> Ps, Ai, Adobe Xd
