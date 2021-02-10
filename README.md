@@ -69,7 +69,7 @@ Python Django
 
 ![프로젝트 참가자](./Docs/img/프로젝트참가자.PNG)
 
-- 최성준 경희대학교 (개발자, 팀장) [@seongjunChoi0714](https://github.com/seongjunChoi0714) NLP (word embedding, text classification,,,) -> Python
+- 최성준 경희대학교 (개발자, 팀장(기획)) [@seongjunChoi0714](https://github.com/seongjunChoi0714) NLP (word embedding, text classification,,,) -> Python
 
 - 권나영 선문대학교 (디자이너) Web Design -> Ps, Ai, Adobe Xd
 
@@ -114,10 +114,10 @@ Python Django
 
 권나영: 웹 최종 디자인 수정, 발표자료 디자인
 
-금빛나: 형태소 분석기 + 빈도수 측정 + ,Word Cloud 연동 
+금빛나: 형태소 분석기 + 빈도수 측정 + Word Cloud 연동 
 
 박정섭: DB 수정 + 서버 구축 
 
-최성준: 최종 word cloud 완료
+최성준: 최종 word cloud 완료, 발표 준비
 
 최은지: Xd기반 웹 프론트 최종
