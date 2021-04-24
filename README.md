@@ -62,14 +62,14 @@ React
 ### Backend
 Python Django
 
-[REST API 문서](https://github.com/seongjunChoi0714/ThanksForToday/blob/master/django-backend/README.md)
+[REST API 문서](https://github.com/DrawingProcess/ThanksForToday/blob/master/django-backend/README.md)
 
 
 ## :busts_in_silhouette:팀원
 
 ![프로젝트 참가자](./Docs/img/프로젝트참가자.PNG)
 
-- 최성준 경희대학교 (개발자, 팀장(기획)) [@seongjunChoi0714](https://github.com/seongjunChoi0714) NLP (word embedding, text classification,,,) -> Python
+- 최성준 경희대학교 (개발자, 팀장(기획)) [@DrawingProcess](https://github.com/DrawingProcess) NLP (word embedding, text classification,,,) -> Python
 
 - 권나영 선문대학교 (디자이너) Web Design -> Ps, Ai, Adobe Xd
 
