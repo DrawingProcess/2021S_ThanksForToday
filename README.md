@@ -12,7 +12,7 @@
 일시: 2021.2.4 - 2.6. (목~토)
 
 [프로젝트Info](https://swhackathon.com/Team/Info/39)  
-[발표영상](https://youtu.be/JZqDV9e2_E4)  
+[발표영상](https://youtu.be/qf_f_7uO9tg)  
 [시연영상](https://youtu.be/cevoZZ-MPNA)   
 
 ## 소개
